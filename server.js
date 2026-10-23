@@ -10,7 +10,7 @@ let nextId = 1;
 app.post("/users", (req, res) => {
   const { name, email } = req.body;
   if (!name || !email) {
-    return res.status(400).json({ message: "name and email required" });
+    return res.status(400).json({ message: "name and email required please fill  it" });
   }
   const user = { id: nextId++, name, email };
   users.push(user);
